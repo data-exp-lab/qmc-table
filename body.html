@@ -1,0 +1,68 @@
+  <div class="container">
+    <h1>QMC Data Browser</h1>
+    <p class="lead">
+       Some text about what are we looking at
+    </p>
+    <div class="row">
+      <form class="form-horizontal" role="form">
+        <div class="form-group">
+          <span class="col-md-2 control-label">Temperature</span>
+          <label for="Tmin" class="col-md-1 control-label">min</label>
+          <div class="col-md-1">
+            <input type="text" class="form-control" id="Tmin" name="Tmin" readonly>
+          </div>
+          <label for="Tmax" class="col-md-1 control-label">max</label>
+          <div class="col-md-1">
+            <input type="text" class="form-control" id="Tmax" name="Tmax" readonly>
+          </div>
+          <span class="col-md-2 control-label">Pressure</span>
+          <label for="Pmin" class="col-md-1 control-label">max</label>
+          <div class="col-md-1">
+            <input type="text" class="form-control" id="Pmin" name="Pmin" readonly>
+          </div>
+          <label for="Pmax" class="col-md-1 control-label">max</label>
+          <div class="col-md-1">
+            <input type="text" class="form-control" id="Pmax" name="Pmax" readonly>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="row">
+          <div id="myplot"></div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="row">
+          <table id="example" 
+                 class="display table table-striped table-bordered" style="width:100%">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>T [K]</th>
+                  <th>P [GPa]</th>
+                  <th>dft</th>
+                  <th>ens</th>
+                </tr>
+              </thead>
+              <tfoot>
+                <tr>
+                  <th>Name</th>
+                  <th>T [K]</th>
+                  <th>P [GPa]</th>
+                  <th>dft</th>
+                  <th>ens</th>
+                </tr>
+              </tfoot>
+          </table>
+        </div>
+        <div class="row">
+          <button type="button" class="btn btn-primary" 
+                  id="downloadButton">
+            Download selected
+          </button>
+        </div>
+      </div>
+    </div">
+  </div>

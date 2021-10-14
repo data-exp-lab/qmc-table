@@ -1,85 +1,3 @@
-<html>
-
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
-  <meta name="description" content="QMC-HAMM Table">
-  <meta name="author" content="Xarthisius">
-  <title>QMC-HAMM Table</title>
-  <!-- Custom CSS -->
-  <link href="css/qmc.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/css/dataTables.bootstrap.min.css">
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
-  <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap.min.js"></script>
-  <script src="https://kit.fontawesome.com/36ad4f215e.js" crossorigin="anonymous"></script>
-</head>
-<body>
-  <div class="container">
-    <h1>QMC Data Browser</h1>
-    <p class="lead">
-       Some text about what are we looking at
-    </p>
-    <div class="row">
-      <div class="col-md-8">
-        Select temperature range in the initial conditions (Kelvin)
-        <div class=row>
-          <div class="col-md-6">
-            Min: <input type="text" id="Tmin" name="Tmin">
-          </div>
-          <div class="col-md-6">
-            Max: <input type="text" id="Tmax" name="Tmax">
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="row">
-      <div class="col-md-8">
-        Select pressure range in the initial conditions (GPa)
-        <div class=row>
-          <div class="col-md-6">
-            Min: <input type="text" id="Pmin" name="Pmin">
-          </div>
-          <div class="col-md-6">
-            Max: <input type="text" id="Pmax" name="Pmax">
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <table id="example" 
-             class="display table table-striped table-bordered" style="width:100%">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>T [K]</th>
-              <th>P [GPa]</th>
-              <th>dft</th>
-              <th>ens</th>
-            </tr>
-          </thead>
-          <tfoot>
-            <tr>
-              <th>Name</th>
-              <th>T [K]</th>
-              <th>P [GPa]</th>
-              <th>dft</th>
-              <th>ens</th>
-            </tr>
-          </tfoot>
-      </table>
-    </div>
-    <div class="row">
-      <button type="button" class="btn btn-primary" 
-              id="downloadButton">
-        Download selected
-      </button>
-    </div>
-  </div>
   <script>
     // const hubUrl = "http://localhost:8000/";
     const hubUrl = "https://girder.hub.yt/";
@@ -107,7 +25,7 @@
                 return: true
             },
             "ajax": {
-                "url": hubUrl + "api/v1/qmc/count",
+                "url": hubUrl + "api/v1/qmc/table",
                 "data": function(d) {
                     d.sort = d.columns[d.order[0].column].data;
                     d.limit = d.length;
@@ -140,7 +58,7 @@
                 {"data": "ens"}
             ]   
         });
-        $('#Tmin, #Tmax, #Pmin, #Pmax').keyup( function() {
+        $('#Tmin, #Tmax, #Pmin, #Pmax').change( function() {
             table.draw();
         });
     } );
@@ -193,6 +111,3 @@
       });
     });
   </script>
-
-</body>
-</html>
