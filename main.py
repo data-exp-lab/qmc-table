@@ -2,7 +2,7 @@ import json
 
 import requests
 from bokeh.embed import json_item
-from bokeh.models import ColorBar, ColumnDataSource, CustomJS
+from bokeh.models import ColorBar, ColumnDataSource, CustomJS, HoverTool
 from bokeh.palettes import Viridis256
 from bokeh.plotting import figure
 from bokeh.resources import CDN
@@ -76,8 +76,17 @@ def plot():
     p = figure(
         sizing_mode="stretch_width",
         toolbar_location="below",
-        tools="box_select, pan, hover, reset",
+        tools="box_select, pan, reset",
         active_drag="box_select",
+    )
+    p.add_tools(
+        HoverTool(
+            tooltips=[
+                ("Temp [K]", "@T"),
+                ("Pres [GPa]", "@P"),
+                ("Sim. count", "@count"),
+            ]
+        )
     )
     p.circle(x="T", y="P", size=15, source=source, line_color=mapper, color=mapper)
     p.xaxis[0].axis_label = "Temperature (K)"
