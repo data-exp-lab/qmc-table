@@ -88,9 +88,9 @@ def plot():
             ]
         )
     )
-    p.circle(x="T", y="P", size=15, source=source, line_color=mapper, color=mapper)
-    p.xaxis[0].axis_label = "Temperature (K)"
-    p.yaxis[0].axis_label = "Pressure (GPa)"
+    p.circle(y="T", x="P", size=15, source=source, line_color=mapper, color=mapper)
+    p.yaxis[0].axis_label = "Temperature (K)"
+    p.xaxis[0].axis_label = "Pressure (GPa)"
 
     color_bar = ColorBar(color_mapper=mapper["transform"], width=8)
     p.add_layout(color_bar, "right")
