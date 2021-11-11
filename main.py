@@ -84,7 +84,7 @@ def plot():
             tooltips=[
                 ("Temp [K]", "@T"),
                 ("Pres [GPa]", "@P"),
-                ("Sim. count", "@count"),
+                ("No. configs", "@count"),
             ]
         )
     )

@@ -54,8 +54,19 @@
                 },
                 {"data": "T"},
                 {"data": "P"},
-                {"data": "dft"},
-                {"data": "ens"}
+                {"data": "input_dft"},
+                {"data": "conf_dft"},
+                {"data": "ens"},
+                {
+                    "data": "quantum",
+                    "render": function(data, type, row, meta) {
+                        if (type === 'display') {
+                            var icon = (row.quantum) ? "fa-check" : "fa-times";
+                            return '<i class="fa ' + icon + '"></i>';
+                        }
+                        return data;
+                    }
+                }
             ]   
         });
         $('#Tmin, #Tmax, #Pmin, #Pmax').change( function() {
