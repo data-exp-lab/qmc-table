@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <!-- Page Content -->
+  <div class="container">
+
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">{{title}}
+      {{ "<small>Subheading</small>" if subheading }}
+    </h1>
+
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/index.html">Home</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/news.html">News</a>
+      </li>
+      {% if parent %}
+      <li class="breadcrumb-item">
+        <a href="{{parent['url']}}">{{parent["title"]}}</a>
+      </li>
+      {% endif %}
+      <li class="breadcrumb-item active">{{title}}</li>
+    </ol>
+
+    {{content}}
+
+  </div>
+  <!-- /.container -->
+{% endblock %}

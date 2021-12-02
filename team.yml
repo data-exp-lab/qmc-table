@@ -1,0 +1,16 @@
+team:
+  - name: Scott Jenses
+    role: Principal Investigator
+    image: /img/people/portrait.png
+    institution: The Grainger College of Engineering, University of Illinois at
+      Urbana-Champaign
+  - name: Paul Yang
+    role: Co-PI
+    image: /img/people/pyang.jpg
+    institution: Center for Computational Quantum Physics, Flatiron Institute
+  - name: Matthew Turk
+    role: Co-PI
+    image: /img/people/mturk.jpg 
+    institution: School of Information Sciences & National Center for
+      Supercomputing Applications, University of Illinois at
+      Urbana-Champaign

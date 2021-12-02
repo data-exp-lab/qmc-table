@@ -1,0 +1,7 @@
+institutions:
+  - name: University of Illinois
+    image: uiuc-200.png
+    link: http://illinois.edu/
+  - name: Flatiron Institute
+    image: fi-200.png
+    link: https://www.simonsfoundation.org/flatiron/ 

@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+
+{% block head %}
+  <header>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <!--
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      -->
+      <div class="carousel-inner" role="listbox">
+        <!-- Slide One - Set the background image for this slide in the line below -->
+        <div class="carousel-item active" style="background-image: url('/img/banner_enhanced.png')">
+          <div class="carousel-caption d-md-block">
+            <h2>QMC Hydrogen Data</h3>
+            <p>Fancy subtitle goes here</p>
+          </div>
+        </div>
+      </div>
+      <!--
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+      -->
+    </div>
+  </header>
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+
+    <h1 class="my-4"></h1>
+
+    <!-- Marketing Icons Section 
+    <div class="row">
+      {% for item in highlights %}
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <p class="card-text">{{item["text"]}}</p>
+          </div>
+          <div class="card-footer">
+            <button type="button" class="btn btn-primary redirectGirder"
+                    onclick="redirectGirder(this, '{{item.button_url}}')">
+              {{item.get("button_text", "Learn More")}}
+            </button>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div> -->
+    <!-- /.row -->
+
+    <!-- Features Section -->
+    <div class="row">
+      {% for item in features %}
+      {% set loopeven = loop.index is divisibleby 2 %}
+      {% if loopeven %}
+          <div class="col-lg-6 text-center">
+            <img class="img-fluid rounded lazyload" data-src="{{item['image']}}" alt="" style="max-width: 400px;">
+          </div>
+      {% endif %}
+          <div class="col-lg-6">
+			  <h2><a name="{{item['name']}}">{{item["title"]}}</a></h2>
+            {{item["content"]}}
+          </div>
+      {% if not loopeven %}
+          <div class="col-lg-6 text-center">
+            <img class="img-fluid rounded lazyload" data-src="{{item['image']}}" alt="" style="max-width: 400px;">
+          </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+    <!-- /.row -->
+    <hr>
+
+    <!-- Call to Action Section -->
+    <div class="row mb-4">
+      <div class="col-lg-12">
+      <p>
+      If you are using QMC Hydrogen Data or planning to try it, join the 
+      <a href="https://join.slack.com/t/"> our Slack</a>
+      workspace or subscribe to the 
+      <a href="https://groups.google.com/forum/#!forum/somewhere"> our email list </a>
+      to hear what other users are doing, ask questions, and listen
+      in on and join the community discussion.
+      </p>
+      <p>If you would like to suggest new features, or participate in the
+      discussion of implementation issues, please follow the project on
+      <a href="https://github.com/qmc-hamm"> GitHub </a>.</p>
+      </div>
+    </div>
+    <div class="row support-logos">
+      <div class="col-lg-3"></div>
+      <div class="col-lg-2">
+        <a href="https://join.slack.com/">
+        <img class="rounded-circle lazyload" data-src="img/slack.png" alt="Join the Parsl Slack team" width="60" height="60"><h3>Slack</h3></a>
+      </div>
+      <div class="col-lg-2">
+        <a href="https://github.com/qmc-hamm">
+          <img class="rounded-circle lazyload" data-src="img/github.svg" alt="View source on GitHub" width="60" height="60">
+          <h3>GitHub</h3>
+        </a>
+      </div>
+      <div class="col-lg-2">
+        <a href="https://groups.google.com/forum/#!forum/somewhere">
+          <img class="rounded-circle lazyload" data-src="img/email.jpg" alt="Join QMC HAMM
+          mailing list" width="60" height="60">
+          <h3>Email</h3>
+        </a>
+      </div>
+    </div>
+
+  </div>
+  <!-- /.container -->
+{% endblock %}    

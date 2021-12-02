@@ -1,0 +1,48 @@
+features:
+  - title: What is QMC-HAMM?
+    name: what-wt
+    content: |
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+      est laborum.
+
+      <p>A beta version of the system is available at </p>
+
+      The platform has been designed based on community input
+      primarily through working groups and collaborations with researchers.
+    image: img/wt01.svg
+  - title: Why QMC-HAMM?
+    name: why-wt
+    content: |
+      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+      doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
+      inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+      Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
+      fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
+      sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit
+      amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora
+      incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad
+      minima veniam, quis nostrum exercitationem ullam corporis suscipit
+      laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum
+      iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae
+      consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+    image: img/wt02.svg
+  - title: Third Card
+    name: what-tale
+    content: |
+      A <i>tale</i> is an <b>executable research object</b> that combines data
+      (references), code (computational methods), computational environment, and
+      narrative (traditional science story). Tales are captured in a
+      standards-based format complete with metadata. The Tale stores explicit
+      references to data and code used in computational experiments, both for
+      reproducibility purposes and to permit the citation of the specific
+      versions used in any subsequent research. A Tale can be submitted (e.g.
+      published) to an external research repository and assigned a persistent
+      identifier by the repository. The Whole Tale platform allows users to
+      interactively create and edit Tales and to re-run a Tale to reproduce and
+      verify results as obtained by the original Tale creator.
+    image: img/wt03.svg

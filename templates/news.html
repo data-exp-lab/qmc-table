@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <!-- Page Content -->
+  <div class="container">
+
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">News</h1>
+
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/index.html">Home</a>
+      </li>
+      <li class="breadcrumb-item active">News</li>
+    </ol>
+
+    <!-- Blog Post -->
+    {% for item in news %}
+    <div class="card mb-4">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-lg-3">
+            <a href="#">
+              <img class="img-fluid rounded" src="{{item.get('image', '/img/whole_tale_logo.svg')}}" alt="">
+            </a>
+          </div>
+          <div class="col-lg-9">
+            <h2 class="card-title">{{item["title"]}}</h2>
+            <p class="card-text">{{item["content"]}}</p>
+            <a href="{{item['url']}}" class="btn btn-primary">Read More &rarr;</a>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer text-muted">
+        Posted on {{item["date"]}} by
+        <a href="#">{{item.get("author", "QMC Wizard")}}</a>
+      </div>
+    </div>
+    {% endfor %}
+
+    <!-- Pagination -->
+    <ul class="pagination justify-content-center mb-4">
+      <li class="page-item">
+        <a class="page-link" href="#">&larr; Older</a>
+      </li>
+      <li class="page-item disabled">
+        <a class="page-link" href="#">Newer &rarr;</a>
+      </li>
+    </ul>
+
+  </div>
+
+  </div>
+  <!-- /.container -->
+{% endblock %}

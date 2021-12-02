@@ -7,7 +7,7 @@ from bokeh.palettes import Viridis256
 from bokeh.plotting import figure
 from bokeh.resources import CDN
 from bokeh.transform import linear_cmap
-from flask import Flask, send_from_directory
+from flask import Flask, send_from_directory, redirect, url_for
 from jinja2 import Template
 
 app = Flask(__name__)
@@ -47,20 +47,6 @@ page = Template(
 </html>
 """
 )
-
-
-@app.route("/")
-def root():
-    with open("body.html", "r") as fp:
-        body = fp.read()
-    with open("main.js", "r") as fp:
-        main_js = fp.read()
-    return page.render(resources=CDN.render(), body=body, main_js=main_js)
-
-
-@app.route("/css/<path:path>")
-def send_css(path):
-    return send_from_directory("css", path)
 
 
 @app.route("/plot")
@@ -133,6 +119,15 @@ def plot():
     )
 
     return json.dumps(json_item(p, "myplot"))
+
+
+@app.route("/")
+def main_page():
+    return redirect("/index.html")
+
+@app.route("/<path:path>")
+def send_css(path):
+    return send_from_directory("public", path)
 
 
 if __name__ == "__main__":

@@ -1,3 +1,14 @@
+{% extends "base.html" %}
+
+{% block custommeta %}
+  <link href="css/qmc.css" rel="stylesheet">
+  <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap4.min.js"></script>
+  <script src="https://kit.fontawesome.com/36ad4f215e.js" crossorigin="anonymous"></script>
+  {{ bokeh_cdn() }}
+{% endblock %}
+
+{% block content %}
   <div class="container">
     <h1>QMC Data Browser</h1>
     <p class="lead">
@@ -7,22 +18,22 @@
        paragraph goes here
     </p>
     <div class="row">
-      <form class="form-horizontal" role="form">
-        <div class="form-group">
-          <label for="Tmin" class="col-md-1 control-label">Tmin (K)</label>
-          <div class="col-md-2">
+      <form role="form">
+        <div class="form-row">
+          <div class="form-group col-md-3">
+            <label for="Tmin" class="control-label">Tmin (K)</label>
             <input type="text" class="form-control" id="Tmin" name="Tmin" readonly>
           </div>
-          <label for="Tmax" class="col-md-1 control-label">Tmax (K)</label>
-          <div class="col-md-2">
+          <div class="form-group col-md-3">
+            <label for="Tmax" class="control-label">Tmax (K)</label>
             <input type="text" class="form-control" id="Tmax" name="Tmax" readonly>
           </div>
-          <label for="Pmin" class="col-md-1 control-label">Pmin (GPa)</label>
-          <div class="col-md-2">
+          <div class="form-group col-md-3">
+            <label for="Pmin" class="control-label">Pmin (GPa)</label>
             <input type="text" class="form-control" id="Pmin" name="Pmin" readonly>
           </div>
-          <label for="Pmax" class="col-md-1 control-label">Pmax (GPa)</label>
-          <div class="col-md-2">
+          <div class="form-group col-md-3">
+            <label for="Pmax" class="control-label">Pmax (GPa)</label>
             <input type="text" class="form-control" id="Pmax" name="Pmax" readonly>
           </div>
         </div>
@@ -46,7 +57,7 @@
                   <th>T [K]</th>
                   <th>P [GPa]</th>
                   <th>Det. dft</th>
-                  <th>Conf. dft</th>
+                  '<th>Conf. dft</th>
                   <th>Ens</th>
                   <th>Quantum</th>
                 </tr>
@@ -77,3 +88,13 @@
       Text goes here
     </p>
   </div>
+{% endblock %}
+
+{% block customjs %}
+  <script src="/js/qmctable.js" async=""></script>
+  <script>
+    fetch('/plot')
+      .then(function(response) { return response.json(); })
+      .then(function(item) { return Bokeh.embed.embed_item(item); })
+  </script>
+{% endblock %}
