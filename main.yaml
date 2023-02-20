@@ -1,48 +1,41 @@
 features:
-  - title: What is QMC-HAMM?
+  - title: Dense hydrogen diffusion Monte Carlo (DMC) database
     name: what-wt
     content: |
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.
+      Many aspects of the phase diagram of dense hydrogen remain poorly understood, 
+      sometimes even qualitatively. Dense hydrogen is predicted become a high-temperature 
+      superconductor at sufficiently high pressure and is crucial in determining the 
+      structure of gas giant planets. Addressing the entire phase diagram with accurate 
+      ab initio simulations like diffusion Monte Carlo (DMC) is not currently feasible 
+      due to the computational cost, which limits studies to small system sizes. 
+      Recently, machine-learned interatomic potentials trained on ab initio data have 
+      been applied in large-scale molecular dynamics simulations to approach the accuracy 
+      of the ab initio methods without the finite size errors. Typically, these have relied 
+      on density functional theory to generate the training data. Here we provide the a
+      large-scale DMC database for dense hydrogen, which allows training of machine-learned 
+      potentials with DMC accuracy.
 
-      <p>A beta version of the system is available at </p>
+    image: img/f10e_grid-phase-diagram.pdf
 
-      The platform has been designed based on community input
-      primarily through working groups and collaborations with researchers.
-    image: img/wt01.svg
-  - title: Why QMC-HAMM?
+  - title: Stable solid molecular hydrogen above 900K
     name: why-wt
     content: |
-      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-      doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
-      inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-      Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
-      fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
-      sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit
-      amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora
-      incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad
-      minima veniam, quis nostrum exercitationem ullam corporis suscipit
-      laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum
-      iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae
-      consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
-    image: img/wt02.svg
-  - title: Third Card
+      Recently we used a new potential trained on this DMC data in large-scale path 
+      integral molecular dynamics simulations to study molecular hydrogen. We found 
+      a phase diagram with HCP and C2/c-24 phases and two new structures with Fmmm-4 
+      molecular centers. The Fmmm-4 structures show a molecular orientational order 
+      transition from an ordered low-temperature structure to an isotropic high-temperature 
+      phase which melts to a molecular liquid with a maximum melting temperature of 
+      1450K at 150 GPa. This finding will likely lead to new experimental studies 
+      of the melting curve for molecular hydrogen.
+
+    image: img/f70a_solid-phases.pdf
+  - title: yt Hub 
+    name: what-tale
+    content: 
+    image: img/ythub.png
+
+  - title: How to use the database
     name: what-tale
     content: |
-      A <i>tale</i> is an <b>executable research object</b> that combines data
-      (references), code (computational methods), computational environment, and
-      narrative (traditional science story). Tales are captured in a
-      standards-based format complete with metadata. The Tale stores explicit
-      references to data and code used in computational experiments, both for
-      reproducibility purposes and to permit the citation of the specific
-      versions used in any subsequent research. A Tale can be submitted (e.g.
-      published) to an external research repository and assigned a persistent
-      identifier by the repository. The Whole Tale platform allows users to
-      interactively create and edit Tales and to re-run a Tale to reproduce and
-      verify results as obtained by the original Tale creator.
-    image: img/wt03.svg
+    image: img/f70g_melt_ricky.pdf

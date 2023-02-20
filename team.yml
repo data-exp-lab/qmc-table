@@ -1,15 +1,42 @@
 team:
-  - name: Scott Jenses
+  - name: David Ceperley
     role: Principal Investigator
-    image: /img/people/portrait.png
+    image: /img/people/dceperley.jpg
     institution: The Grainger College of Engineering, University of Illinois at
       Urbana-Champaign
   - name: Paul Yang
-    role: Co-PI
+    role: Principal Investigator
     image: /img/people/pyang.jpg
     institution: Center for Computational Quantum Physics, Flatiron Institute
+  - name: Scott Jensen
+    role: Principal Investigator
+    image: /img/people/sjensen.jpg
+    institution: The Grainger College of Engineering, University of Illinois at
+      Urbana-Champaign
+  - name: Kacper Kowalik
+    role: Principal Investigator
+    image: /img/people/kkowalik.jpg
+    institution: The Grainger College of Engineering, University of Illinois at
+      Urbana-Champaign
+  - name: Hongwei Niu
+    role: Principal Investigator
+    image: /img/people/hniu.jpg
+    institution: Department of Astranautical Science and Mechanics, Harbin Institute of Technology
+  - name: Kevin Ly
+    role: Principal Investigator
+    image: /img/people/kly.jpg
+    institution: The Grainger College of Engineering, University of Illinois at
+      Urbana-Champaign
+  - name: Markus Holzmann
+    role: Principal Investigator
+    image: /img/people/mholzmann.jpg
+    institution: University Grenoble Alpes, CNRS, LPMMC
+  - name: Carlo Pierleoni
+    role: Principal Investigator
+    image: /img/people/cpierleoni.jpg
+    institution: Department of Physical and Chemical Sciences, University of L'Aquila
   - name: Matthew Turk
-    role: Co-PI
+    role: Principal Investigator
     image: /img/people/mturk.jpg 
     institution: School of Information Sciences & National Center for
       Supercomputing Applications, University of Illinois at
