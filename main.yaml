@@ -1,7 +1,7 @@
 features:
   - title: Dense hydrogen diffusion Monte Carlo (DMC) database
     name: what-wt
-    content:
+    content: |
       Many aspects of the phase diagram of dense hydrogen remain poorly understood, 
       sometimes even qualitatively. Dense hydrogen is predicted become a high-temperature 
       superconductor at sufficiently high pressure and is crucial in determining the 
@@ -32,7 +32,7 @@ features:
     image: img/f70a_solid-phases.pdf
   - title: yt Hub 
     name: what-tale
-    content: |
+    content: 
     image: img/ythub.png
 
   - title: How to use the database
