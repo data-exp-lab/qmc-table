@@ -1,4 +1,4 @@
-bokeh
+bokeh==2.4.1
 flask
 requests
 pymdown-extensions
