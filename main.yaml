@@ -15,7 +15,7 @@ features:
       large-scale DMC database for dense hydrogen, which allows training of machine-learned 
       potentials with DMC accuracy.
 
-    image: img/f10e_grid-phase-diagram.pdf
+    image: img/f10e_grid-phase-diagram.png
 
   - title: Stable solid molecular hydrogen above 900K
     name: why-wt
@@ -29,7 +29,7 @@ features:
       1450K at 150 GPa. This finding will likely lead to new experimental studies 
       of the melting curve for molecular hydrogen.
 
-    image: img/f70a_solid-phases.pdf
+    image: img/f70a_solid-phases.png
   - title: yt Hub 
     name: what-tale
     content: 
@@ -38,4 +38,4 @@ features:
   - title: How to use the database
     name: what-tale
     content: |
-    image: img/f70g_melt_ricky.pdf
+    image: img/f70g_melt_ricky.png
