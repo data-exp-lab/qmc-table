@@ -26,6 +26,17 @@ To begin using this template, choose one of the following options to get started
 
 ## Usage
 
+### Quick Start
+
+```
+python -m venv venv
+. ./venv/bin/activate
+pip install -r requirements.txt
+python3 generate.py
+python3 main.py
+firefox http://localhost:5000
+```
+
 ### Basic Usage
 
 After downloading, simply edit the HTML and CSS files included with the template in your favorite text editor to make changes. These are the only files you need to worry about, you can ignore everything else! To preview the changes you make to the code, you can open the `index.html` file in your web browser.
