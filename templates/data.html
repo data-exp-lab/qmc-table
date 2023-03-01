@@ -12,10 +12,14 @@
   <div class="container">
     <h1>QMC Data Browser</h1>
     <p class="lead">
-       Some text about what are we looking at
+       Quantum Monte Carlo energy and forces of high-pressure hydrogen configurations.
     </p>
     <p>
-       paragraph goes here
+       We provide a set of atomic snapshots sampled on a grid of thermodynamic conditions relevant for high-pressure hydrogen.
+       Each dot is a (pressure, temperature) condition sampled by one of classical molecular dynamics, Monte Carlo, or path-integral molecular dynamics.
+       The color of the dot encodes the number of configurations available at this condition.
+       Each configuration contains geometric properties: proton positions, simulation cell along with electronic property calculated using DMC: total energy and force on each proton.
+       To download the configurations, click and drag to select the thermodynamic conditions of interest, then press the "Download selected" at the end of the page.
     </p>
     <div class="row">
       <form role="form">
@@ -83,9 +87,9 @@
         </div>
       </div>
     </div>
-    <h3>Some further text</h3>
+    <h3>File format</h3>
     <p>
-      Text goes here
+    atomic simulation environment (ASE) UlmASE-Trajectory
     </p>
   </div>
 {% endblock %}
